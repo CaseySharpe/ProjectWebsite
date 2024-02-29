@@ -19,15 +19,15 @@
         .navbar {
             background-color: #333;
             padding: 10px;
-            width: 600px; /* Adjust the width of the navbar */
+            width: 1000px; /* Adjust the width of the navbar */
             height: 45px;
-            left: 1200px;
+            left: 600px;
             box-sizing: border-box;
             display: flex;
             flex-direction: row; /* Change the flex direction to row */
             justify-content: center; /* Center horizontally */
             align-items: flex-end; /* Align to the bottom */
-            position: absolute; /* Fix the navbar position */
+            position: fixed; /* Fix the navbar position */
             top: 100px; /* Center vertically at 50% from the top */
             right: 0; /* Align to the right edge */
         }
@@ -210,6 +210,7 @@
 
 
 
+
         /* H2 styles */
         .content h2 {
             margin: 10px 0 0; /* Adjust the top margin for the headings */
@@ -244,6 +245,89 @@
         .content a:hover {
             text-decoration: underline;
         }
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            width: 1000px; /* Adjust the width of the navbar */
+            height: 45px;
+            left: 600px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row; /* Change the flex direction to row */
+            justify-content: center; /* Center horizontally */
+            align-items: flex-end; /* Align to the bottom */
+            position: fixed; /* Fix the navbar position */
+            top: 100px; /* Center vertically at 50% from the top */
+            right: 0; /* Align to the right edge */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row; /* Keep the flex direction as row */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: transparent;
+            margin-bottom: 300000px; /* Adjust the spacing between links */
+            margin-right: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px; /* Adjust the maximum width of the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            line-height: 1.6;
+            margin: 20px auto 0; /* Adjusted margin-top to 20px */
+            max-width: 800px; /* Adjust the maximum width of the content */
+        }
+
+        .sidebar {
+            width: 75px; /* Adjust the width of the sidebar */
+            background-color: #1a5276;
+            color: white;
+            padding: 3px;
+            box-sizing: border-box;
+            height: 80vh; /* Adjust to fill the entire height of the viewport */
+            position: fixed; /* Fix the sidebar position */
+            top: 80px; /* Position at the top of the viewport */
+            left: 0; /* Position at the left edge of the viewport */
+        }
+
+
+
+
+
+
+
+
+
+
 
     </style>
 </head>
