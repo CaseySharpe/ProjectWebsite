@@ -4,137 +4,376 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Innocente</title>
+    <style>
+        body, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-y: scroll; /* Enable vertical scrolling for the entire page */
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            width: 600px; /* Adjust the width of the navbar */
+            height: 45px;
+            left: 1200px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row; /* Change the flex direction to row */
+            justify-content: center; /* Center horizontally */
+            align-items: flex-end; /* Align to the bottom */
+            position: absolute; /* Fix the navbar position */
+            top: 100px; /* Center vertically at 50% from the top */
+            right: 0; /* Align to the right edge */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row; /* Keep the flex direction as row */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: transparent;
+            margin-bottom: 300000px; /* Adjust the spacing between links */
+            margin-right: 100px;
+        }
+
+        /* Add grey box background on hover */
+        .navbar a:hover {
+            background-color: #666;
+        }
+        .sidebar a:hover {
+            border-radius: 5px;
+            background-color: #666;
+        }
+
+
+
+
+        /* Container styles for the content */
+        .container {
+            display: flex;
+            max-width: 1200px; /* Adjust the maximum width of the container */
+            margin: 0 auto; /* Center the container */
+        }
+        /* Content Area styles */
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            line-height: 1.6;
+            margin: 70px auto 0;
+            max-height: 100%;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: auto;
+            background-color: #556b2f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            bottom: 0; /* Adjusted to 0 */
+        }
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .content h1 {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+
+        .content p {
+            margin-top: 20px;
+            text-align: left;
+            position: relative;
+            top: 125px;
+        }
+
+        .navbar {
+            display: block;
+        }
+        .sidebar {
+            width: 75px; /* Adjust the width of the sidebar */
+            background-color: #1a5276;
+            color: white;
+            padding: 3px;
+            box-sizing: border-box;
+            height: 80vh; /* Adjust to fill the entire height of the viewport */
+            position: fixed; /* Fix the sidebar position */
+            top: 110px; /* Position at the top of the viewport */
+            left: 0; /* Position at the left edge of the viewport */
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 300px;
+        }
+
+        .sidebar a:first-child {
+            margin-top: 50px; /* Adjust the margin-top to set space at the top */
+        }
+
+        .sidebar a:not(:first-child):not(:last-child) {
+            margin-top: 300px; /* Maintain equal 300px spacing for middle elements */
+        }
+
+        .sidebar a:last-child{
+            margin-bottom: 0px; /* Adjust the margin-bottom to set space at the bottom */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        .sidebar a:last-child{
+            margin-bottom: 0px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .banner {
+            background-color: #DC143C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 24px;
+
+        }
+
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            line-height: 1.6;
+            margin: 70px auto 0; /* Adjusted margin-top to 70px */
+            max-width: 800px; /* Adjust the maximum width of the content */
+        }
+
+        .content .header3 {
+            margin: 10px 0; /* Adjusted the top margin for the headings */
+            font-size: 16px; /* Font size for the headings */
+            text-align: left; /* Align the text to the left */
+            left: 30px;
+        }
+
+        .content .Resume {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            left: 30px;
+            margin-top: 70px; /* Adjust the margin-top value */
+        }
+        /* Header 2 styles */
+        .content .header2 {
+            margin: 10px 0 0; /* Adjust the top margin for the headings */
+            font-size: 16px; /* Font size for the headings */
+            text-align: left; /* Align the text to the left */
+            left: 30px;
+        }
+
+
+
+        /* H2 styles */
+        .content h2 {
+            margin: 10px 0 0; /* Adjust the top margin for the headings */
+            font-size: 16px; /* Font size for the headings */
+            text-align: left; /* Align the text to the left */
+            left: 30px;
+        }
+
+        /* H3 styles for Project Work Experience */
+        .content .header3 {
+            margin: 10px 0 0; /* Adjust the top margin for the headings */
+            font-size: 16px; /* Font size for the headings */
+            text-align: left; /* Align the text to the left */
+            left: 30px;
+        }
+        .content h4 {
+            margin: 10px 0 0;
+            font-size: 14px; /* Adjust the font size for H4 */
+            text-align: left;
+            left: 30px;
+        }
+
+        /* Paragraph styles */
+        .content p {
+            margin: 70px 0 0; /* Adjust the top margin for the paragraphs */
+            font-size: 16px; /* Font size for the paragraphs */
+            text-align: left; /* Align the text to the left */
+            left: 30px;
+        }
+
+        /* Link hover state styles */
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
-<style>
-
-    h1:nth-child(odd),
-    h2:nth-child(odd),
-    h3:nth-child(odd),
-    h4:nth-child(odd),
-    h5:nth-child(odd),
-    h6:nth-child(odd) {
-        text-align: right;
-    }
-
-    h1:nth-child(even),
-    h2:nth-child(even),
-    h3:nth-child(even),
-    h4:nth-child(even),
-    h5:nth-child(even),
-    h6:nth-child(even) {
-        text-align: left;
-    }
-
-
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 20px;
-    }
-
-    h1, h2 {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    h1:nth-child(even), h2:nth-child(odd) {
-        text-align: left;
-    }
-
-    h1:nth-child(odd), h2:nth-child(even) {
-        text-align: right;
-    }
-
-    p {
-        text-align: justify;
-    }
-
-    ul {
-        text-align: left;
-        margin-left: 20px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #007bff;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-</style>
 <body>
-<h1>Daniel Innocente</h1>
-<p>Email: <a href="mailto:dji5111@psu.edu">dji5111@psu.edu</a></p>
-<p>Phone: <a href="tel:7189624636">718-962-4636</a></p>
-<p>Location: Staten Island, New York</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/danielinnocente">linkedin.com/in/danielinnocente</a></p>
-<p>Portfolio: <a href="https://dinn7470.github.io/Portfolio/">dinn7470.github.io/Portfolio/</a></p>
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-<h2>Education</h2>
-<p>The Pennsylvania State University, University Park, PA 16802</p>
-<p>B.S., Human Centered Design and Development</p>
-<p>Cumulative GPA: 2.8, Major GPA: 3.1</p>
-<p>Graduation: December 2025</p>
+<!-- Container for Content -->
 
-<h2>Project Work Experience</h2>
-<p>Java Oriented Mental Health Services Application, App Development Studio, Solo Project</p>
-<ul>
-    <li>Implementing inheritances and interfaces to create a mental health focused web application</li>
-    <li>Designing uses cases for user to access a confidential journal and book therapist appointments</li>
-</ul>
+    <h1 class="Resume">My Resume</h1>
+    <h2 class="header2">Contact Info</h2>
+    <h3 class="header3">dji5111@psu.edu | 718-962-4636 | Staten Island, New York | <a href="www.linkedin.com/in/danielinnocente">www.linkedin.com/in/danielinnocente</a></h3>
+    <h2 class="header2">Education</h2>
+    <h4>The Pennsylvania State University, University Park, PA 16802, December 2025
+        <br>B.S., Human Centered Design and Development
+        Cumulative GPA: 2.8, Major GPA: 3.1
+    </h4>
+    <h2 class="header2"> Project Work Experience </h2>
+    <h3 class="header3"> Java Oriented Mental Health Services Application, App Development Studio, Solo Project</h3>
+    <ul>
+        <li>Implementing inheritances and interfaces to create a mental health-focused web application</li>
+        <li>Designing use cases for the user to access a confidential journal and book therapist appointments</li>
+    </ul>
+    <h3 class="header3"> Application Figma Prototype Project, Design Practice in Human Centered Design, Team Member</h3>
+    <ul>
+        <li>Researched and analyzed data regarding common mental health treatments</li>
+        <li>Created flow charts, site maps, and customer journey maps to develop an accessible user experience</li>
+        <li>Designed a prototype of a mobile application that centralized virtual mental health resources</li>
+    </ul>
+    <h3 class="header3">Application PowerPoint Prototype Project, Foundations of Human Centered Design, Team Member</h3>
+    <ul>
+        <li>Developed a prototype for the application to enable real-time inspection and evaluation of building occupancy</li>
+        <li>Delivered detailed design presentation outlining application functionality, utility, and implementation</li>
+    </ul>
+    <h3 class="header3"> Hospital Database Design Project, Team Leader</h3>
+    <ul>
+        <li>Designed entry-oriented SQL database to store, process, and retrieve relevant healthcare information</li>
+        <li>Created flow charts, site maps, and customer journey maps to develop an accessible user experience</li>
+    </ul>
+    <h2 class="header2">Skills</h2>
+    <ul>
+        <li>Programming Languages: Java, Structured Query Language, Python, HTML</li>
+        <li>Software: Adobe Premiere Pro (Certified), Adobe Photoshop, Microsoft Office, Canva</li>
+    </ul>
+    <h2 class="header2">Co-Curricular Experience</h2>
+    <h3 class="header3">Penn State Club Cross Country</h3>
+    <h4 class="header4">Social Chair</h4>
+    <ul>
+        <li>Organize team bonding events, recreational activities to increase morale and drive engagement for over 100 members</li>
+        <li>Coordinate closely with officer board to design and develop initiatives and logistics for club operations</li>
 
-<p>Application Figma Prototype Project, Design Practice in Human Centered Design, Team Member</p>
-<ul>
-    <li>Researched and analyzed data regarding common mental health treatments</li>
-    <li>Created flow charts, site maps, and customer journey maps to develop an accessible user experience</li>
-    <li>Designed a prototype of a mobile application that centralized virtual mental health resources</li>
-</ul>
+    </ul>
+    <h4 class="header4">Team Member</h4>
+    <ul>
+        <li>Consistently attend practices, compete with the team in meets, and engage in social activities</li>
+        <li>Attend and compete in yearly national intercollegiate running club championships</li>
+    </ul>
+    <h3 class="header3">Penn State THON Special Events Committee</h3>
+    <h4 class="header4">Committee Member</h4>
+    <ul>
+        <li>Attended weekly meetings for five months to learn about THON’s mission, history, and impact</li>
+        <li>Effectively maintained THON physical security over 46-hour timeframe and conducted activities for THON children</li>
+    </ul>
+    <h3 class="header3">User Experience Professionals Association</h3>
+    <h4 class="header4">Club Member</h4>
+    <ul>
+        <li>Engage with fellow UX students twice a week to discuss, explore, and ideate relevant career opportunities and goals</li>
+        <li>Work to re-design website for the Competitive Cyber-Security Organization to increase membership and digital presence</li>
 
-<p>Application PowerPoint Prototype Project, Foundations of Human Centered Design, Team Member</p>
-<ul>
-    <li>Developed prototype for application to enable real-time inspection and evaluation of building occupancy</li>
-    <li>Delivered detailed design presentation outlining application functionality, utility, and implementation</li>
-</ul>
+    </ul>
+    <h2 class="header2">Work Experience</h2>
+    <h3 class="header3">The Pennsylvania State University, Dining Hall Server and Cleaner</h3>
+    <ul>
+        <li>Served 300+ students three times weekly, ensuring efficient and accurate operation of dining hall</li>
+        <li>Effectively stocked high-volume dish room in fast paced environment working as part of a team</li>
 
-<p>Hospital Database Design Project, Team Leader</p>
-<ul>
-    <li>Designed entity-oriented SQL database to store, process, and retrieve relevant healthcare information for hospital system</li>
-    <li>Scheduled and lead meetings three times weekly to ensure productivity, quality, and consistency</li>
-</ul>
+    </ul>
+    <h3 class="header3">New Dorp High School, Technology Management Intern</h3>
+    <ul>
+        <li>Managed setup and deployment of 50+ computers daily, installed and transported devices for technology-based instruction</li>
+        <li>Analyzed and updated inventory of 1000 technological devices to ensure effective organizational planning</li>
+    </ul>
+    <h3 class="header3">CentSai, Editorial and Social Media Intern </h3>
+    <ul>
+        <li>Designed posts and wrote captions for social media platforms to help engage users in the company’s brand</li>
+        <li>Conducted research to identify emerging trends in the personal finance industry</li>
+    </ul>
+<P>
 
-<h2>Skills</h2>
-<ul>
-    <li>Programming Languages: Java, Structured Query Language, Python, HTML</li>
-    <li>Software: Adobe Premiere Pro (Certified), Adobe Photoshop, Microsoft Office, Canva</li>
-</ul>
 
-<h2>Co-Curricular Experience</h2>
-<p>Penn State Club Cross Country</p>
-<ul>
-    <li>Social Chair (August 2023 – Present)</li>
-    <li>Team Member (August 2022 – Present)</li>
-</ul>
 
-<p>Penn State THON Special Events Committee</p>
-<ul>
-    <li>Committee Member (October 2022 – February 2023)</li>
-</ul>
 
-<p>Penn State User Experience Professionals Association</p>
-<ul>
-    <li>Club Member (August 2023 – Present)</li>
-</ul>
+</P>
 
-<h2>Work Experience</h2>
-<p>The Pennsylvania State University, Dining Hall Server and Cleaner (February 2023 – May 2023)</p>
-<p>New Dorp High School, Technology Management Intern (July 2022 – August 2022)</p>
-<p>CentSai, Editorial and Social Media Intern (July 2021-August 2021)</p>
+    <p>
+
+
+
+
+    </p>
+
+</div>
+
+<div class="sidebar">
+    <a href="#">Link 1</a>
+    <a href="https://calendar.online/5a1752b8653290844571">Calendar</a>
+    <a href="#">Link 3</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="copyright">
+        &copy; 2024 Student Website. All rights reserved.
+    </div>
+    <div class="social-media">
+        <!-- Add your social media links here -->
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+    <div class="banner">
+        <h1>Daniel Innocente</h1>
+    </div>
+</footer>
 </body>
 </html>

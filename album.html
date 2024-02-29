@@ -2,9 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
     <title>Title</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        /* Updated Navbar styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            width: 600px; /* Adjust the width of the navbar */
+            height: 45px;
+            left: 1200px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row; /* Change the flex direction to row */
+            justify-content: center; /* Center horizontally */
+            align-items: flex-end; /* Align to the bottom */
+            position: fixed; /* Fix the navbar position */
+            top: 100px; /* Center vertically at 50% from the top */
+            right: 0; /* Align to the right edge */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row; /* Keep the flex direction as row */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: transparent;
+            margin-bottom: 300000px; /* Adjust the spacing between links */
+            margin-right: 100px;
+        }
+
+        /* Add grey box background on hover */
+        .navbar a:hover {
+            background-color: #666;
+        }
+        .sidebar a:hover {
+            border-radius: 5px;
+            background-color: #666;
+        }
+
+
+
+
+        /* Container styles for the content */
+        .container {
+            display: flex;
+        }
+
+        /* Content Area styles */
+
+
+        /* Footer styles */
+        .footer {
+            margin-top: auto;
+            background-color: #556b2f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position:fixed;
+            bottom:0;
+        }
+
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+
+        .navbar {
+            display: block; /* Ensure navbar is visible */
+        }
+        .sidebar {
+            width: 75px; /* Adjust the width of the sidebar */
+            background-color: #1a5276;
+            color: white;
+            padding: 3px;
+            box-sizing: border-box;
+            height: 80vh; /* Adjust to fill the entire height of the viewport */
+            position: fixed; /* Fix the sidebar position */
+            top: 110px; /* Position at the top of the viewport */
+            left: 0; /* Position at the left edge of the viewport */
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 300px;
+        }
+
+        .sidebar a:first-child {
+            margin-top: 50px; /* Adjust the margin-top to set space at the top */
+        }
+
+        .sidebar a:not(:first-child):not(:last-child) {
+            margin-top: 300px; /* Maintain equal 300px spacing for middle elements */
+        }
+
+        .sidebar a:last-child{
+            margin-bottom: 0px; /* Adjust the margin-bottom to set space at the bottom */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .banner {
+            background-color: #DC143C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            position: fixed; /* Fixed position at the top of the screen */
+            width: 100%; /* Full width */
+            top: 0; /* Positioned at the top */
+            left: 0; /* Ensures it starts from the left edge */
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .Pics {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .content img {
+            width: 300px; /* Adjust the width as needed */
+            margin: 10px; /* Adjust the spacing between images */
+        }
+    </style>
 </head>
 <body>
 
-</body>
-</html>
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Container for Content -->
+
+
+    <!-- Content Area -->
+    <div class="content">
+        <h1 class="Pics">Some of my favorite Pictures</h1>
+        <img src="IMG_1516.jpg" alt="Dan"class="Pic1">
+        <img src="IMG_1517.jpg" alt="Dan"class="Pic2">
+        <img src="IMG_1518.jpg" alt="Dan"class="Pic3">
+        <img src="IMG_1519.jpg" alt="Dan"class="Pic4">
+    </div>
+
+
+<div class="sidebar">
+    <a href="#">Link 1</a>
+    <a href="https://calendar.online/5a1752b8653290844571">Calendar</a>
+    <a href="#">Link 3</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="copyright">
+        &copy; 2024 Student Website. All rights reserved.
+    </div>
+    </div>
+    <div class="social-media">
+        <!-- Add your social media links here -->
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+    <div class="banner">
+        <h1>Daniel Innocente</h1>
+    </div>
+
+</footer>

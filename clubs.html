@@ -2,9 +2,289 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
     <title>Title</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        /* Updated Navbar styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            width: 600px; /* Adjust the width of the navbar */
+            height: 45px;
+            left: 1200px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row; /* Change the flex direction to row */
+            justify-content: center; /* Center horizontally */
+            align-items: flex-end; /* Align to the bottom */
+            position: fixed; /* Fix the navbar position */
+            top: 100px; /* Center vertically at 50% from the top */
+            right: 0; /* Align to the right edge */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row; /* Keep the flex direction as row */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: transparent;
+            margin-bottom: 300000px; /* Adjust the spacing between links */
+            margin-right: 100px;
+        }
+
+        /* Add grey box background on hover */
+        .navbar a:hover {
+            background-color: #666;
+        }
+        .sidebar a:hover {
+            border-radius: 5px;
+            background-color: #666;
+        }
+
+
+
+
+        /* Content Area styles */
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left; /* Align the text to the left */
+            line-height: 1.6; /* Adjust the line height for more spacing between lines */
+            max-width: 800px; /* Set a maximum width for the paragraph */
+            margin: 0 auto; /* Center the content within the container */
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: auto;
+            background-color: #556b2f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            bottom:0;
+        }
+
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .content h1 {
+            margin-bottom: 20px; /* Add margin at the bottom of the h1 */
+            text-align: left;
+            /* Align the h1 text to the left */
+        }
+
+        .navbar {
+            display: block; /* Ensure navbar is visible */
+        }
+        .sidebar {
+            width: 75px; /* Adjust the width of the sidebar */
+            background-color: #1a5276;
+            color: white;
+            padding: 3px;
+            box-sizing: border-box;
+            height: 80vh; /* Adjust to fill the entire height of the viewport */
+            position: fixed; /* Fix the sidebar position */
+            top: 110px; /* Position at the top of the viewport */
+            left: 0; /* Position at the left edge of the viewport */
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 300px;
+        }
+
+        .sidebar a:first-child {
+            margin-top: 50px; /* Adjust the margin-top to set space at the top */
+        }
+
+        .sidebar a:not(:first-child):not(:last-child) {
+            margin-top: 300px; /* Maintain equal 300px spacing for middle elements */
+        }
+
+        .sidebar a:last-child{
+            margin-bottom: 0px; /* Adjust the margin-bottom to set space at the bottom */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .banner {
+            background-color: #DC143C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            position: fixed; /* Fixed position at the top of the screen */
+            width: 100%; /* Full width */
+            top: 0; /* Positioned at the top */
+            left: 0; /* Ensures it starts from the left edge */
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content .XC {
+            text-align: left;
+            margin: 10px 20px; /* Adjust margins as needed */
+            font-size: 25px;
+            position: relative; /* Ensure position is relative for top/left to work */
+            top: 100px; /* Adjust the top value */
+            left: -400px;
+        }
+
+        /* Additional styles for Club Cross Country Description and Image */
+        .content .XCDESC {
+            text-align: left;
+            width: 60%; /* Adjust the width as needed */
+            margin: 10px 20px; /* Adjust margins as needed */
+            top: 100px; /* Adjust the top value */
+            position: relative;
+            left: -400px;
+        }
+
+        .content .Club {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            float: right;
+            top: -250px;
+        }
+
+        .content .THON {
+            text-align: left;
+            margin: 10px 20px;
+            font-size: 25px;
+            position: relative;
+            top: 125px;
+            left: -400px;
+
+        }
+
+        /* Additional styles for Club Cross Country Description and Image */
+        .content .THONDESC {
+            text-align: left;
+            width: 60%;
+            margin: 10px 20px;
+            top: 125px;
+            position: relative;
+            left: -400px;
+        }
+
+        .content .THONPic {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            float: right;
+            left: 300px;
+            top: -105px; /* Adjust the top value to move it up */
+        }
+
+    </style>
 </head>
 <body>
 
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Container for Content -->
+
 </body>
-</html>
+
+
+</style>
+</head>
+<body>
+<div class="content">
+    <h1 class="XC">Club Cross Country</h1>
+    <p class="XCDESC">
+        Club Cross Country is the club that I am the most involved with. It is a running club for runners of all speeds and skill levels. <br>
+        Penn State Club Cross Country was founded to give Penn State students of all abilities the chance to train and compete in distance running at the collegiate
+        <br>level without the stresses of a varsity sport, regardless of age, ancestry, color, disability or handicap, national origin, race, religious creed,
+        sex, sexual orientation, gender identity, gender expression, veteran status, or any intersectional combination of these categories.<br>
+        Club Cross Country functions under the core values of inclusivity, enthusiasm, resiliency, drive, hard work, positivity, and fun.
+    </p>
+    <img src="IMG_1514.jpg" alt="Dan"class="Club Pic">
+    <h1 class="THON">THON</h1>
+    <p class="THONDESC">
+        THON™ is a student-run philanthropy committed to enhancing the lives of children and families impacted by childhood cancer.
+        Our mission is to provide emotional and financial support, spread awareness, and ensure funding for critical research—all in pursuit of a cure.
+    </p>
+    <img src="IMG_1515.jpg" alt="Dan"class="THONPic">
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Container for Content -->
+<div class="sidebar">
+    <a href="#">Link 1</a>
+    <a href="https://calendar.online/5a1752b8653290844571">Calendar</a>
+    <a href="#">Link 3</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="copyright">
+        &copy; 2024 Student Website. All rights reserved.
+    </div>
+    <div class="social-media">
+        <!-- Add your social media links here -->
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+    <div class="banner">
+        <h1>Daniel Innocente</h1>
+    </div>
+
+</footer>
