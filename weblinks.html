@@ -25,25 +25,21 @@
         /* Navbar styles */
         /* Updated Navbar styles */
         .navbar {
-            background-color: #333;
-            padding: 10px;
-            width: 600px; /* Adjust the width of the navbar */
-            height: 45px;
-            left: 1200px;
-            box-sizing: border-box;
+            background-color: #653740;
             display: flex;
-            flex-direction: row; /* Change the flex direction to row */
-            justify-content: center; /* Center horizontally */
-            align-items: flex-end; /* Align to the bottom */
-            position: fixed; /* Fix the navbar position */
-            top: 100px; /* Center vertically at 50% from the top */
-            right: 0; /* Align to the right edge */
+            align-items: center;
+            width: auto;
+            height: 25px;
+            padding: 15px;
+            position: fixed;
+            right: 5px;
+            top: 90px; /* Adjusted top position to account for banner's height and padding */
         }
 
         .navbar ul {
             list-style-type: none;
             display: flex;
-            flex-direction: row; /* Keep the flex direction as row */
+            flex-direction: row;
         }
 
         .navbar a {
@@ -53,13 +49,18 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             background-color: transparent;
-            margin-bottom: 300000px; /* Adjust the spacing between links */
-            margin-right: 100px;
+            display: inline-block;
+            margin-left: 0;
         }
 
         /* Add grey box background on hover */
         .navbar a:hover {
             background-color: #666;
+        }
+        .navbar a:not(:last-child) {
+
+            margin-right: 30px;
+
         }
         .sidebar a:hover {
             border-radius: 5px;
@@ -110,6 +111,8 @@
             top: 110px; /* Position at the top of the viewport */
             left: 0; /* Position at the left edge of the viewport */
         }
+        /* ... (your existing styles) ... */
+
         .sidebar a {
             color: white;
             text-decoration: none;
@@ -117,6 +120,15 @@
             font-size: 16px;
             margin-bottom: 300px;
         }
+
+        /* Use position relative for the third link */
+        .sidebar a:nth-child(3) {
+            position: relative;
+            top: -50px; /* Adjust the top value to raise the text */
+        }
+
+        /* ... (your existing styles) ... */
+
 
         .sidebar a:first-child {
             margin-top: 50px; /* Adjust the margin-top to set space at the top */
@@ -166,8 +178,8 @@
 <!-- Navbar -->
 <nav class="navbar">
     <ul>
-        <li><a href="./index.html.html">Home</a></li>
-        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./resume2.html">Resume</a></li>
         <li><a href="./mymajors.html">My Major</a></li>
         <li><a href="./album.html">Photo Album</a></li>
         <li><a href="./clubs.html">Clubs</a></li>
@@ -217,7 +229,7 @@
 
 
 <div class="sidebar">
-    <a href="#">Link 1</a>
+    <a href="./form.html">Contact Me</a>
     <a href="https://calendar.online/5a1752b8653290844571">Calendar</a>
     <a href="https://brucespringsteen.net/" target="_blank">Favorite Website</a>
 </div>

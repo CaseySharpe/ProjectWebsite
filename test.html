@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner {
+        background-color: #DC143C;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        box-sizing: border-box;
+        position: fixed; /* Fixed position at the top of the screen */
+        width: 100%; /* Full width */
+        top: 0; /* Positioned at the top */
+        height:125px;
+    }
+
+    .banner h1 {
+        margin: 0;
+        font-size: 38px;
+    }
+
+    .container {
+        position: relative; /* Ensure the container has a non-static position */
+        width: 100%; /* Adjust the width as needed */
+    }
+
+    .navbar {
+        background-color: #653740;
+        /* Your existing styles... */
+        display: flex; /* Change to flex to align items horizontally */
+        align-items: center; /* Align items vertically */
+        width: auto; /* Remove fixed width */
+        height: 25px;
+        padding: 15px; /* Adjust padding */
+        position: fixed; /* Change to fixed position */
+        right: 5px; /* Adjusted right position */
+        top: 30px; /* Adjusted top position */
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: transparent;
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    /* Add grey box background on hover */
+    .navbar a:hover {
+        background-color: #666;
+    }
+    .navbar a:not(:last-child) {
+
+        margin-right: 30px;
+
+    }
+    .content {
+        text-align: center;
+        max-width: 1200px;
+        margin: 150px auto; /* Adjust margin as needed */
+        box-sizing: border-box;
+    }
+                                                                                                                                                     
+    h1.Resume {
+        font-size: 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, ul, ol {
+        margin: 10px;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    h3, h4 {
+        font-weight: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 20px;
+    }
+
+    ul, ol {
+        list-style-type: none;
+    }
+
+    li {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+</style>
+<body>
+<div class="banner">
+    <h1>Daniel Innocente</h1>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./mymajors.html">My Major</a></li>
+            <li><a href="./album.html">Photo Album</a></li>
+            <li><a href="./clubs.html">Clubs</a></li>
+            <li><a href="./weblinks.html">Favorite Sites</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <!-- Your content goes here -->
+</div>
+
+</body>
+</html>

@@ -22,50 +22,11 @@
             height: 100vh;
         }
 
-        /* Navbar styles */
-        /* Updated Navbar styles */
-        .navbar {
-            background-color: #333;
-            padding: 10px;
-            width: 1000px; /* Adjust the width of the navbar */
-            height: 45px;
-            left: 600px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row; /* Change the flex direction to row */
-            justify-content: center; /* Center horizontally */
-            align-items: flex-end; /* Align to the bottom */
-            position: fixed; /* Fix the navbar position */
-            top: 100px; /* Center vertically at 50% from the top */
-            right: 0; /* Align to the right edge */
-        }
 
-        .navbar ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row; /* Keep the flex direction as row */
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            background-color: transparent;
-            margin-bottom: 300000px; /* Adjust the spacing between links */
-            margin-right: 100px;
-        }
-
-        /* Add grey box background on hover */
-        .navbar a:hover {
-            background-color: #666;
-        }
         .sidebar a:hover {
             border-radius: 5px;
             background-color: #666;
         }
-
 
 
 
@@ -97,9 +58,7 @@
         }
 
 
-        .navbar {
-            display: block; /* Ensure navbar is visible */
-        }
+
         .sidebar {
             width: 75px; /* Adjust the width of the sidebar */
             background-color: #1a5276;
@@ -119,6 +78,11 @@
             margin-bottom: 300px;
         }
 
+        /* Use position relative for the third link */
+        .sidebar a:nth-child(3) {
+            position: relative;
+            top: -50px; /* Adjust the top value to raise the text */
+        }
         .sidebar a:first-child {
             margin-top: 50px; /* Adjust the margin-top to set space at the top */
         }
@@ -169,6 +133,45 @@
             width: 300px; /* Adjust the width as needed */
             margin: 10px; /* Adjust the spacing between images */
         }
+        .navbar {
+            background-color: #653740;
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 25px;
+            padding: 15px;
+            position: fixed;
+            right: 5px;
+            top: 90px; /* Adjusted top position to account for banner's height and padding */
+        }
+
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: transparent;
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        /* Add grey box background on hover */
+        .navbar a:hover {
+            background-color: #666;
+        }
+        .navbar a:not(:last-child) {
+
+            margin-right: 30px;
+
+        }
     </style>
 </head>
 <body>
@@ -177,7 +180,7 @@
 <nav class="navbar">
     <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="./resume2.html">Resume</a></li>
         <li><a href="./mymajors.html">My Major</a></li>
         <li><a href="./album.html">Photo Album</a></li>
         <li><a href="./clubs.html">Clubs</a></li>
@@ -199,9 +202,9 @@
 
 
 <div class="sidebar">
-    <a href="#">Link 1</a>
+    <a href="./form.html">Contact Me</a>
     <a href="https://calendar.online/5a1752b8653290844571">Calendar</a>
-    <a href="#">Link 3</a>
+    <a href="https://brucespringsteen.net/" target="_blank">Favorite Website</a>
 </div>
 
 <!-- Footer -->
@@ -221,18 +224,3 @@
     </div>
 
 </footer>
-<form
-        action="https://formspree.io/f/mayrokyp"
-        method="POST"
->
-    <label>
-        Your email:
-        <input type="email" name="email">
-    </label>
-    <label>
-        Your message:
-        <textarea name="message"></textarea>
-    </label>
-    <!-- your other form fields go here -->
-    <button type="submit">Send</button>
-</form>

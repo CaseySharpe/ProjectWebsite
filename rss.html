@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic RSS Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rss-feed {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .feed-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+
+        .feed-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .feed-description {
+            color: #666;
+        }
+
+        .feed-link {
+            display: block;
+            color: #428bca;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        .feed-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="rss-feed">
+    <!-- Feed Items will be dynamically generated here using JavaScript -->
+</div>
+
+<script>
+    // Example data for the RSS feed
+    const rssFeedItems = [
+        { title: 'Article 1', description: 'Description for Article 1.', link: 'https://example.com/article1' },
+        { title: 'Article 2', description: 'Description for Article 2.', link: 'https://example.com/article2' },
+        { title: 'Article 3', description: 'Description for Article 3.', link: 'https://example.com/article3' }
+        // Add more items as needed
+    ];
+
+    // Function to dynamically generate feed items
+    function generateFeedItems() {
+        const feedContainer = document.querySelector('.rss-feed');
+
+        rssFeedItems.forEach(item => {
+            const feedItem = document.createElement('div');
+            feedItem.classList.add('feed-item');
+
+            const title = document.createElement('div');
+            title.classList.add('feed-title');
+            title.textContent = item.title;
+
+            const description = document.createElement('div');
+            description.classList.add('feed-description');
+            description.textContent = item.description;
+
+            const link = document.createElement('a');
+            link.classList.add('feed-link');
+            link.href = item.link;
+            link.textContent = 'Read more';
+
+            feedItem.appendChild(title);
+            feedItem.appendChild(description);
+            feedItem.appendChild(link);
+            feedContainer.appendChild(feedItem);
+        });
+    }
+
+    // Call the function to generate feed items
+    generateFeedItems();
+</script>
+</body>
+</html>
